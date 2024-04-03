@@ -35,7 +35,10 @@ button {
 }
 
 .button3 {
-  /*Style me! You can test out changing the font, or font size, ...*/
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: larger;
+  font-stretch: expanded;
+  color: rgb(255, 203, 82);
 }
 
 .button4 {
