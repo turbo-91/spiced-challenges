@@ -38,7 +38,7 @@ main {
 .box--top-left {
   position: absolute;
   top: 0px;
-  right: 0px;
+  left: 0px;
   background-color: #aed6f1;
 }
 
@@ -52,7 +52,7 @@ main {
 .box--top-right {
   position: absolute;
   top: 0px;
-  left: 0px;
+  right: 0px;
   background-color: #5dade2;
 }
 
