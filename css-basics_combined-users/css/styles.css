@@ -65,6 +65,12 @@ li {
   margin: 0;
 }
 
+.currently-online {
+  .bio {
+    display: none;
+  }
+}
+
 /*
   Part 1
 
