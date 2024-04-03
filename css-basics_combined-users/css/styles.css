@@ -67,6 +67,9 @@ li {
 
 .currently-online {
   display: none;
+  .location {
+    text-align: left;
+  }
 }
 
 /*
