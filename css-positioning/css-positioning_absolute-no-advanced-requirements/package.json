@@ -1,7 +1,7 @@
 {
-  "name": "css-positioning_demo-start",
+  "name": "css-positioning_absolute-no-advanced-requirements",
   "version": "0.0.0-unreleased",
-  "description": "",
+  "description": "Exercise for css positioning absolute",
   "main": "index.html",
   "nf": {
     "template": "html-css"
