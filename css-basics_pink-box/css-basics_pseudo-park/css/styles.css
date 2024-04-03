@@ -43,9 +43,10 @@
   background-color: lightblue;
 }
 
-.animal giraffe:hocer {
+.animal giraffe:hover {
   background-color: lightgreen;
 }
+
 /*
   The giraffe is afraid of the crocodile and the dino.
    - center the giraffe in the park
