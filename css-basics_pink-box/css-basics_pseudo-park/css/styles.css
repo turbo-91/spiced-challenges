@@ -31,19 +31,19 @@
   */
 }
 
-.animal giraffe {
+.giraffe {
   text-align: center;
 }
 
-.animal dino {
+.dino {
   text-align: right;
 }
 
-.animal crocodile:hover {
+.crocodile:hover {
   background-color: lightblue;
 }
 
-.animal giraffe:hover {
+.giraffe:hover {
   background-color: lightgreen;
 }
 
