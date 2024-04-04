@@ -25,24 +25,26 @@ button {
   padding: 8px 25px;
 }
 
-/* Your exercise starts here */
-
-/* Add your CSS styles below this line. Feel free to replace the comments with your code. Make sure not to put your code into the comments, because then nothing will happen. */
-
 .button1 {
-  /*Style me! Change my border, set a border radius or what you want to try out. :) */
+  border-color: deeppink;
 }
 
 .button2 {
-  /*Style me! Change my color, or my background-color. Or both! You can test out different color modes here - like HEX, RGB, ... */
+  color: aqua;
+  background-color: darkolivegreen;
 }
 
 .button3 {
-  /*Style me! You can test out changing the font, or font size, ...*/
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: larger;
+  font-stretch: expanded;
+  color: rgb(255, 203, 82);
 }
 
 .button4 {
-  /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
+  box-shadow: 10px 10px rgba(255, 38, 241, 0.2);
+  font-family: cursive;
+  border-radius: 5px;
+  border-color: rgba(255, 38, 241, 0.2);
+  color: skyblue;
 }
-
-/* Feel free to play around with other properties, as well. */
