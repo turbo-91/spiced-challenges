@@ -22,7 +22,7 @@ header {
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--tertiary-color);
   line-height: 1.4;
   margin: 0;
   letter-spacing: 0.025em;
@@ -68,7 +68,7 @@ figure {
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--tertiary-color);
 }
 
 nav {
@@ -83,7 +83,7 @@ a {
   padding: 8px;
   border-radius: 4px;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--tertiary-color);
 }
 
 a:hover,
