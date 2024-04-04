@@ -71,7 +71,8 @@ section {
 */
 
 .subtitle {
-  /* your solution */
+  border-left: solid 5px gold;
+  border-right: solid 5px gold;
 }
 
 /* ------- List ------- */
