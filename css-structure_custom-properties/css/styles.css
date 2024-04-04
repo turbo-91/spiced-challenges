@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #8236ff;
+  --secondary-color: #303030;
+  --tertiary-color: #ffffff;
+}
+
 body {
   margin: 0;
   font-family: system-ui;
