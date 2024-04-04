@@ -17,7 +17,7 @@ body {
 }
 
 header {
-  background: rgb(48 48 48 / 100%);
+  background: var(--secondary-color);
 }
 
 h1 {
@@ -88,7 +88,7 @@ a {
 
 a:hover,
 a:focus-visible {
-  background-color: rgb(48 48 48);
+  background-color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -100,6 +100,6 @@ mark {
 }
 
 ::selection {
-  background-color: #303030;
+  background-color: var(--secondary-color);
   color: var(--primary-color);
 }
