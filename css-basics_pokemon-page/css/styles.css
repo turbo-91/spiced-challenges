@@ -73,6 +73,7 @@ section {
 .subtitle {
   border-left: solid 3px gold;
   border-right: solid 3px gold;
+  padding: 3px;
 }
 
 /* ------- List ------- */
