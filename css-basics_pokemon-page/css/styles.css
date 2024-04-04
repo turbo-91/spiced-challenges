@@ -77,6 +77,11 @@ section {
   display: inline-block;
 }
 
+.subtitle-border {
+  border-left: solid 3px orange;
+  border-right: solid 3px orange;
+}
+
 /* ------- List ------- */
 
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
