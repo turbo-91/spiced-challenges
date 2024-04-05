@@ -90,7 +90,9 @@ h1 {
 
 .box--four {
   background-color: lightgray;
-
+  @media (prefers-color-scheme: dark) {
+    background-color: pink;
+  }
   width: 100px;
   height: 100px;
 }
