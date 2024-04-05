@@ -69,7 +69,13 @@ h1 {
 .box--two {
   background-color: lightgreen;
 
-  width: 100px;
+  @media (min-width: 600px) {
+    width: 200px;
+  }
+  @media (min-width: 1200px) {
+    width: 400px;
+  }
+
   height: 100px;
 }
 
