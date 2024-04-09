@@ -20,6 +20,16 @@ body {
   grid-template-rows: 300px 200px 300px;
   gap: 1rem;
   padding: 1rem;
+  grid-template-areas:
+    "image-board__image--1"
+    "image-board__image--2"
+    "image-board__image--3"
+    "image-board__image--4"
+    "image-board__image--5"
+    "image-board__image--6";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+
   /* Add styles here */
 }
 
