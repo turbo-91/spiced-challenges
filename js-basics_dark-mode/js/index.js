@@ -8,13 +8,13 @@ darkModeButton.addEventListener("click", () => {
 });
 
 const lightModeButton = document.querySelector('[data-js="light-mode-button"]');
-darkModeButton.addEventListener("click", () => {
+lightModeButton.addEventListener("click", () => {
   bodyElement.classList.remove("dark");
 });
 
 const toggleModeButton = document.querySelector(
   '[data-js="toggle-mode-button"]'
 );
-darkModeButton.addEventListener("click", () => {
+toggleModeButton.addEventListener("click", () => {
   bodyElement.classList.toggle("dark");
 });
