@@ -71,12 +71,12 @@ body {
 }
 
 .element-2 {
-  grid-column: 5 / span 9;
+  grid-column: 5 / span 6;
 }
 
 .element-5 {
   grid-column: 3 / span 2;
-  grid-row: 2 / span 2;
+  grid-row: 3 / span 2;
 }
 
 .element-8 {
@@ -84,10 +84,11 @@ body {
 }
 
 .element-spiced {
-  grid-row: 1 / repeat(5, 1fr 2fr);
+  grid-column: 1 / 11;
+  order: -1;
 }
 
 .element-20 {
-  grid-row: 4 / span 2;
+  grid-row: 6 / span 2;
   grid-column: 1 / span 1;
 }
