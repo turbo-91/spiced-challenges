@@ -8,22 +8,22 @@ button.addEventListener("click", () => {
   const age = Number(input.value);
 
   if (age < 20 && age > 12) {
-    output.innerHTML = "You are a teen.";
+    output.value = "You are a teen.";
   } else if ((age > 20 && age < 79) || (age < 13 && age >= 0)) {
-    output.innerHTML = "You are not a teen.";
+    output.value = "You are not a teen.";
   } else if (age < 0) {
-    output.innerHTML = "How are you aging backwards? Are you Benjamin Button?";
+    output.value = "How are you aging backwards? Are you Benjamin Button?";
   } else if (age > 79 && age < 109) {
-    output.innerHTML =
+    output.value =
       "While I respect you as an elder, I have to tell you that you are not a teen.";
   } else if (age > 109 && age < 122) {
-    output.innerHTML =
+    output.value =
       "Damn, you are a medical wonder but no teen, unfortunately...";
-  } else if (age > 123 && age < 150) {
-    output.innerHTML =
+  } else if (age > 122 && age < 150) {
+    output.value =
       "Congratulations! You are older than the oldest human to be alive ever recorded!";
   } else if (age > 149) {
-    output.innerHTML = "You are either lying or not human.";
+    output.value = "You are either lying or not human.";
   }
 
   // Exercise:
