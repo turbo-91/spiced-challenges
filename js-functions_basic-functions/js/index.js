@@ -8,9 +8,10 @@ console.clear();
   - the number of sales
 */
 
-// --v-- write your code here --v--
-
-// --^-- write your code here --^--
+let bestsellerTitle = "The Fifth Season";
+let bestsellerAuthor = "N. K. Jemisin";
+let bestsellerRating = 4.6;
+let bestsellerSales = 10000;
 
 /*
 2: Log all variables to the console, for example:
@@ -18,13 +19,21 @@ console.clear();
 Title: The Lord of the Javascript
 Author: Mario
 Rating: 4.2
-Sales: 120
+Sales: 120 */
 
-Increase the number of sales and change the rating of the book afterwards.
-Then log all variables to the console again.
-*/
+logBookData();
+
+/*Increase the number of sales and change the rating of the book afterwards.
+Then log all variables to the console again.*/
+
+/*
+ */
 
 // --v-- write your code here --v--
+bestsellerRating = 4.8;
+bestsellerSales = 20000;
+
+logBookData();
 
 // --^-- write your code here --^--
 
@@ -36,6 +45,19 @@ Then log all variables to the console again.
  - Now increase the number of sales 2 more times and log the data after each increase.
 */
 
-// --v-- write your code here --v--
+function logBookData() {
+  console.log("Title: ", bestsellerTitle);
+  console.log("Author: ", bestsellerAuthor);
+  console.log("Rating :", bestsellerRating);
+  console.log("Sales :", bestsellerSales);
+}
 
-// --^-- write your code here --^--
+bestsellerRating = 4.9;
+bestsellerSales = 30000;
+
+logBookData();
+
+bestsellerRating = 5.0;
+bestsellerSales = 1000000000000;
+
+logBookData();
