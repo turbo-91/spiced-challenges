@@ -12,6 +12,8 @@ console.log("The result to EXERCISE 1 is:", exampleArray);
 // Nest an array inside array nestedArray. After that nestedArray should contain an array as an element.
 
 const nestedArray = ["example", 10, true];
+nestedArray[nestedArray.length] = ["It is", 100, "% terryfing to me"];
+console.log("The result to EXERCISE 2 is:", nestedArray);
 
 // EXERCISE 3
 // Change the value of firstNumber to equal the first value of the numbers array using bracket notation.
@@ -19,11 +21,12 @@ const nestedArray = ["example", 10, true];
 const numbers = [20, 10, 50];
 
 const firstNumber = "change me";
-
 // EXERCISE 4
 // Change the fruit stored at index 0 of fruits to mango.
 
 const fruits = ["apple", "banana", "grapefruit"];
+fruits[0] = "mango";
+console.log("The result to EXERCISE 4 is:", fruits);
 
 // EXERCISE 5
 // Change the value of nestedNumber to equal the fourth number of nestedNumbers using bracket notation.
