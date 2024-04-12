@@ -19,6 +19,14 @@ console.log("Exercise 2:");
 2: Look at the functions below. They are almost identical. Can you find a way to generalize them into a new function with an input parameter? Replace the function calls below with your new function.
 */
 
+function greetingsMyFriend(name) {
+  console.log("Welcome " + name + ", good to see you again!");
+}
+
+greetingsMyFriend("Bob");
+greetingsMyFriend("Alice");
+greetingsMyFriend("Mary");
+/*
 function greetBob() {
   console.log("Welcome Bob, good to see you again!");
 }
