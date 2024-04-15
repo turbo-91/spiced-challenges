@@ -30,8 +30,11 @@ function getGreeting() {
   else if ((currentTime >= 23) & (currentTime <= 5))
 }
 
-function getDayColor() {
-  // Code here
+  function getDayColor() {
+    currentWeekday = new Date().getDay();
+    if (currentWeekday = "monday") return "darkgray";
+    else if (currentWeekday = ["tuesday", "wednesday", "thursday", "friday"]) return "lightblue";
+    else if (currentWeekday = ["saturday", "sunday"]) return "hotpink";
 }
 
 display.textContent = getGreeting();
