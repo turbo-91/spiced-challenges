@@ -12,6 +12,10 @@ We want to add some functionality to the buttons on this page. When pressing a b
 */
 
 redButton.addEventListener("click", () => {
+  removeAllColors(){
+    box.classList.remove
+    box.classList.color// red
+  }
   // use your functions to
   // - remove all classes
   // - then add the class name: "red"
