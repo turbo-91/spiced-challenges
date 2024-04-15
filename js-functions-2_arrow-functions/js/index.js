@@ -1,3 +1,5 @@
+.knl
+
 console.clear();
 
 /*
@@ -5,10 +7,17 @@ Rewrite the following functions as arrow functions.
 Use implicit returns when possible
 */
 
+const getCurrentHour = (now, currentHour) => {
+  const now = new Date();
+  const currentHour = now.getHours();
+  if (currentHour === 0) return "12am"  
+  else if (currentHour === 0)
+}
+
 function getCurrentHour() {
   const now = new Date();
   const currentHour = now.getHours();
-  if (currentHour === 0) {
+  if (currentHour === 0)  {
     return "12am";
   } else if (currentHour === 12) {
     return "12pm";
@@ -46,3 +55,4 @@ const isOddAndSmall = (number) => {
 const add3 = (a, b, c) => a + b + c;
 
 const repeat10 = (string) => string.repeat(10);
+
