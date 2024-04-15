@@ -32,9 +32,9 @@ function getGreeting() {
 
   function getDayColor() {
     currentWeekday = new Date().getDay();
-    if (currentWeekday = "monday") return "darkgray";
-    else if (currentWeekday = ["tuesday", "wednesday", "thursday", "friday"]) return "lightblue";
-    else if (currentWeekday = ["saturday", "sunday"]) return "hotpink";
+    if (currentWeekday = "1") return "darkgray";
+    else if (currentWeekday >=2 & currentWeekday <= 5 ) return "lightblue";
+    else if (currentWeekday = 6 || 0) return "hotpink";
 }
 
 display.textContent = getGreeting();
