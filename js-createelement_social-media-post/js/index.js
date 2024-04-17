@@ -32,7 +32,13 @@ const spanNew = document.createElement(span);
 spanNew.classList.add("post__username");
 spanNew.textContent = "@Username";
 
+const buttonNew = document.createElement(button);
+buttonNew.classList.add("post__button");
+buttonNew.textContent = "♥ Like";
+buttonNew.addEventListener("click", handleLikeButtonClick);
+
 body.append(sectionNew);
 sectionNew.append(paragraphNew);
-sectionNew.append(footer);
-footerNew.append(span);
+sectionNew.append(footerNew);
+footerNew.append(spanNew);
+footerNew.append(buttonNew);
