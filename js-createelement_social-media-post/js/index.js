@@ -22,12 +22,15 @@ sectionNew.classList.add("post");
 
 const paragraphNew = document.createElement(paragraph);
 paragraphNew.classList.add("post__content");
+paragraphNew.textContent =
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
 
 const footerNew = document.createElement(footer);
 footerNew.classList.add("post__footer");
 
 const spanNew = document.createElement(span);
 spanNew.classList.add("post__username");
+spanNew.textContent = "@Username";
 
 body.append(sectionNew);
 sectionNew.append(paragraphNew);
