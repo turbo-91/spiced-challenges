@@ -18,4 +18,18 @@ headlineNew.textContent = "Social Media Post";
 body.append(h1); */
 
 const sectionNew = document.createElement(section);
-section.classList.add("post");
+sectionNew.classList.add("post");
+
+const paragraphNew = document.createElement(paragraph);
+paragraphNew.classList.add("post__content");
+
+const footerNew = document.createElement(footer);
+footerNew.classList.add("post__footer");
+
+const spanNew = document.createElement(span);
+spanNew.classList.add("post__username");
+
+body.append(sectionNew);
+sectionNew.append(paragraphNew);
+sectionNew.append(footer);
+footerNew.append(span);
