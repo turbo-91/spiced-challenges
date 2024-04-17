@@ -48,4 +48,5 @@ for (const key in nav) {
   const lItem = document.createElement("li");
   const lAnchor = document.createElement("a");
   lAnchor.href(nav[key[href]]);
+  lAnchor.textContent(nav[key[text]]);
 }
