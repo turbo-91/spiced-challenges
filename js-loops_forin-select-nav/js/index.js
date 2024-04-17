@@ -25,6 +25,7 @@ main.append(select);
 for (const ln in languages) {
   const option = document.createElement("option");
   option.textContent(languages[key]);
+  option.value(languages[key]);
 }
 
 // Part 2: Creating a Navigation Bar
