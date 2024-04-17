@@ -9,14 +9,18 @@ console.clear();
 	- a boolean called isReported
 */
 
-// --v-- write your code here --v--
-
-// --^-- write your code here --^--
+const title = "What a beautiful day!";
+const text = "The sky is blue and the sun is shining";
+const numberLikes = 0;
+const userName = "covfefe91";
+const isReported = true;
 
 /*
 2. Log all variables to the console. Increase the likes by one and log the amount of likes again. Adapt your code from 1.1 if necessary.
 */
 
-// --v-- write your code here --v--
-
-// --^-- write your code here --^--
+console.log("Title:", title);
+console.log("Text:", text);
+console.log("Likes:", numberLikes + 1);
+console.log("User:", userName);
+console.log("Reported?", isReported);
