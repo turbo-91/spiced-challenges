@@ -44,4 +44,6 @@ navElement.append(ul);
 
 // --v-- write/change code here --v--
 
-// --^-- write/change code here --^--
+for (const key in nav) {
+  const lItem = document.createElement("li");
+}
