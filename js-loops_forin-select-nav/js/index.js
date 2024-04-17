@@ -46,4 +46,5 @@ navElement.append(ul);
 
 for (const key in nav) {
   const lItem = document.createElement("li");
+  const lAnchor = document.createElement("a");
 }
