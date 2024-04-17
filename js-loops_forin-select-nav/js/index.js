@@ -24,8 +24,8 @@ main.append(select);
 
 for (const key in languages) {
   const option = document.createElement("option");
-  option.textContent(languages[key]);
-  option.value(languages[key]);
+  option.textContent = languages[key];
+  option.value = languages[key];
   select.append(option);
 }
 
@@ -47,8 +47,8 @@ navElement.append(ul);
 for (const key in nav) {
   const lItem = document.createElement("li");
   const lAnchor = document.createElement("a");
-  lAnchor.href(nav[key[href]]);
-  lAnchor.textContent(nav[key[text]]);
+  lAnchor.href = nav[key[href]];
+  lAnchor.textContent = nav[key[text]];
   ul.append(li);
   li.append(a);
 }
