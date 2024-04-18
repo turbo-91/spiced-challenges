@@ -19,3 +19,4 @@ function showErrorMessage(errorMessage) {
 }
 
 handleUserLogin(showWelcomeMessage, showErrorMessage, "Jane Doe");
+handleUserLogin(showWelcomeMessage, showErrorMessage, "John Doe");
