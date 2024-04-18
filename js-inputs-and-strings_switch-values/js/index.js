@@ -28,3 +28,10 @@ lowercaseButton.addEventListener("click", () => {
   firstInput.value = firstInput.value.toLowerCase();
   secondInput.value = secondInput.value.toLowerCase();
 });
+
+switchButton.addEventListener("click", () => {
+  const switchStep1 = secondInput.value();
+  const switchStep2 = firstInput.value();
+  firstInput.textContent() = switchStep1;
+  secondInput.textContent() = switchStep2;
+});
