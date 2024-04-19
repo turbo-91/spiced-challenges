@@ -1,6 +1,8 @@
 const form = document.querySelector('[data-js="form"]');
 const main = document.querySelector('[data-js="main"]');
 
+// Create new Question card on submit
+
 function onSubmit(event) {
   event.preventDefault();
 
@@ -52,6 +54,8 @@ function onSubmit(event) {
 }
 
 form.addEventListener("submit", onSubmit);
+
+// Character counter for question input field
 
 const yourQuestion = document.querySelector('[data-js="yourQuestion"]');
 const amountLeft = document.querySelector('[data-js="amountLeft"]');
