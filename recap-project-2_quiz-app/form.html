@@ -45,11 +45,15 @@
           <input
             type="text"
             name="yourTag"
+            data-js="yourTag"
             maxlength="150"
             id="yourTag"
             aria-label="yourTagInput"
             aria-labelledby="aria-help.md"
           />
+          <small class="yourTag__character-count"
+            >(<span data-js="amountLeftTag"></span> characters left)</small
+          >
         </fieldset>
         <button type="submit">Submit</button>
       </form>
