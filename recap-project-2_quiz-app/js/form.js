@@ -58,20 +58,33 @@ form.addEventListener("submit", onSubmit);
 // Character counter for question input field
 
 const yourQuestion = document.querySelector('[data-js="yourQuestion"]');
-const amountLeft = document.querySelector('[data-js="amountLeft"]');
-const maxLength = yourQuestion.getAttribute("maxlength");
+const amountLeftQuestion = document.querySelector(
+  '[data-js="amountLeftQuestion"]'
+);
+const maxLengthQuestion = yourQuestion.getAttribute("maxlength");
 
-const updateAmountLeft = (value) => {
-  amountLeft.innerText = value;
+const updateAmountLeftQuestion = (value) => {
+  amountLeftQuestion.innerText = value;
 };
 
-updateAmountLeft(maxLength);
+updateAmountLeftQuestion(maxLengthQuestion);
 
 yourQuestion.addEventListener("input", () => {
-  updateAmountLeft(maxLength - yourQuestion.value.length);
+  updateAmountLeftQuestion(maxLengthQuestion - yourQuestion.value.length);
 });
 
-// how do I get the Form Date into the Card? Really FormData and then some kinda loop? Or do I grab every individual one with target element?
-// Check in the code from class and the exercises of the others and come up with (a probably failing) attempt, then ask coach.
+// Character counter for answer input field
 
-// appends will go here. Is this also all singularly? Or some kind of Loop sitation?
+const yourAnswer = document.querySelector('[data-js="yourAnswer"]');
+const amountLeftAnswer = document.querySelector('[data-js="amountLeftAnswer"]');
+const maxLengthAnswer = yourAnswer.getAttribute("maxlength");
+
+const updateAmountLeftAnswer = (value) => {
+  amountLeftAnswer.innerText = value;
+};
+
+updateAmountLeftAnswer(maxLengthAnswer);
+
+yourQuestion.addEventListener("input", () => {
+  updateAmountLeftAnswer(maxLengthAnswer - yourAnswer.value.length);
+});

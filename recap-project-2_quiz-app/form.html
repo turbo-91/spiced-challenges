@@ -25,16 +25,20 @@
             aria-labelledby="aria-help.md"
           ></textarea>
           <small class="yourQuestion__character-count"
-            >(<span data-js="amountLeft"></span> characters left)</small
+            >(<span data-js="amountLeftQuestion"></span> characters left)</small
           >
           <label for="yourAnswer">Please submit your answer here.</label>
           <textarea
             name="yourAnswer"
             id="yourAnswer"
+            data-js="yourAnswer"
             maxlength="150"
             aria-label="yourAnswer-input"
             aria-labelledby="aria-help.md"
           ></textarea>
+          <small class="yourAnswer__character-count"
+            >(<span data-js="amountLeftAnswer"></span> characters left)</small
+          >
           <label for="yourTag"
             >Please provide us with a fitting tag for your question.</label
           >
