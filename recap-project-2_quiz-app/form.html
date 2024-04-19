@@ -4,39 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="/.js/form.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Quiz App</h1>
     </header>
     <main>
-      <form>
-        <label for="your-question">Please submit your question here.</label>
-        <textarea
-          name="your-question"
-          id="your-question"
-          aria-label="your-question-input"
-          aria-labelledby="aria-help.md"
-        ></textarea>
-        <label for="your-answer">Please submit your answer here.</label>
-        <textarea
-          name="your-answer"
-          id="your-answer"
-          aria-label="your-answer-input"
-          aria-labelledby="aria-help.md"
-        ></textarea>
-        <label for="your-tag"
-          >Please provide us with a fitting tag for your question.</label
-        >
-        <input
-          type="text"
-          name="your-tag"
-          id="your-tag"
-          aria-label="your-tag-input"
-          aria-labelledby="aria-help.md"
-        />
+      <form data-js="form">
+        <fieldset>
+          <label for="your-question">Please submit your question here.</label>
+          <textarea
+            name="your-question"
+            id="your-question"
+            aria-label="your-question-input"
+            aria-labelledby="aria-help.md"
+          ></textarea>
+          <label for="your-answer">Please submit your answer here.</label>
+          <textarea
+            name="your-answer"
+            id="your-answer"
+            aria-label="your-answer-input"
+            aria-labelledby="aria-help.md"
+          ></textarea>
+          <label for="your-tag"
+            >Please provide us with a fitting tag for your question.</label
+          >
+          <input
+            type="text"
+            name="your-tag"
+            id="your-tag"
+            aria-label="your-tag-input"
+            aria-labelledby="aria-help.md"
+          />
+        </fieldset>
         <button type="submit">Subtmit</button>
       </form>
     </main>
