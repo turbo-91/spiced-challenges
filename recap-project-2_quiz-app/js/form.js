@@ -53,8 +53,21 @@ function onSubmit(event) {
 
 form.addEventListener("submit", onSubmit);
 
+const yourQuestion = document.querySelector('[data-js="yourQuestion"]');
+const amountLeft = document.querySelector('[data-js="amountLeft"]');
+const maxLength = yourQuestion.getAttribute("maxlength");
+
+const updateAmountLeft = (value) => {
+  amountLeft.innerText = value;
+};
+
+updateAmountLeft(maxLength);
+
+yourQuestion.addEventListener("input", () => {
+  updateAmountLeft(maxLength - yourQuestion.value.length);
+});
+
 // how do I get the Form Date into the Card? Really FormData and then some kinda loop? Or do I grab every individual one with target element?
 // Check in the code from class and the exercises of the others and come up with (a probably failing) attempt, then ask coach.
-/*
 
-// appends will go here. Is this also all singularly? Or some kind of Loop sitation?*/
+// appends will go here. Is this also all singularly? Or some kind of Loop sitation?

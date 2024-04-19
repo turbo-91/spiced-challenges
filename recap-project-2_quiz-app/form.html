@@ -19,10 +19,14 @@
           <textarea
             name="yourQuestion"
             id="yourQuestion"
+            data-js="yourQuestion"
             maxlength="150"
             aria-label="yourQuestionInput"
             aria-labelledby="aria-help.md"
           ></textarea>
+          <small class="yourQuestion__character-count"
+            >(<span data-js="amountLeft"></span> characters left)</small
+          >
           <label for="yourAnswer">Please submit your answer here.</label>
           <textarea
             name="yourAnswer"
