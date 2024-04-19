@@ -7,7 +7,8 @@ form.addEventListener("submit", (event) => {
   const data = Object.fromEntries(formData);
 
   const paragraph = document.createElement("paragraph");
-  document.main.append(paragraph);
+  paragraph.textContent = "test!";
+  document.body.append(paragraph);
 });
 
 //const section = document.createElement("section");
