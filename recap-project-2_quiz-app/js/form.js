@@ -6,5 +6,9 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
-  console.log(data);
+  const paragraph = document.createElement("paragraph");
+  document.main.append(paragraph);
 });
+
+//const section = document.createElement("section");
+//const img = document.createElement("img");
