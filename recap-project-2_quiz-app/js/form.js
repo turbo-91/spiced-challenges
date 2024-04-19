@@ -1,4 +1,5 @@
 const form = document.querySelector('[data-js="form"]');
+const main = document.querySelector('[data-js="main"]');
 
 function onSubmit(event) {
   event.preventDefault();
@@ -19,7 +20,7 @@ function onSubmit(event) {
   let questionInput = data.yourQuestion;
   question.textContent = questionInput;
 
-  // console.log(question);
+  console.log(question);
 
   const answerButton = document.createElement("button");
   answerButton.setAttribute("class", "question-card__button");
@@ -29,7 +30,7 @@ function onSubmit(event) {
   let answerInput = data.yourAnswer;
   answer.textContent = answerInput;
 
-  // console.log(answer);
+  console.log(answer);
 
   const tagContainer = document.createElement("div");
   tagContainer.setAttribute("class", "question-card__tags");
@@ -38,6 +39,16 @@ function onSubmit(event) {
   tag.setAttribute("class", "question-card__tag");
   let tagInput = data.yourTag;
   tag.textContent = tagInput;
+
+  console.log(tag);
+
+  main.append(sectionCard);
+  sectionCard.append(img);
+  sectionCard.append(question);
+  sectionCard.append(answerButton);
+  sectionCard.append(answer);
+  sectionCard.append(tagContainer);
+  tagContainer.append(tag);
 }
 
 form.addEventListener("submit", onSubmit);
