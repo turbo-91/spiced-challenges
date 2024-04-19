@@ -1,21 +1,49 @@
 const form = document.querySelector('[data-js="form"]');
 
-form.addEventListener("submit", (event) => {
+function onSubmit(event) {
   event.preventDefault();
 
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
 
-  // how do I get the Form Date into the Card? Really FormData and then some kinda loop? Or do I grab every individual one with target element?
-  // Check in the code from class and the exercises of the others and come up with (a probably failing) attempt, then ask coach.
-
   const sectionCard = document.createElement("section");
-  const img = document.createElement("img");
-  const subheadling = document.createElement("h2");
-  const button = document.createElement("button");
-  const paragraph = document.createElement("paragraph");
-  const divTagContainer = document.createElement("div");
-  const divTag = document.createElement("div");
+  sectionCard.setAttribute("class", "question-card");
 
-  // appends will go here. Is this also all singularly? Or some kind of Loop sitation?
-});
+  const img = document.createElement("img");
+  img.setAttribute("class", "question-card__icon");
+  img.setAttribute("src", "./assets/bookmark.png");
+  img.setAttribute("alt", "bookmark");
+
+  const question = document.createElement("h2");
+  question.setAttribute("class", "question-card__title");
+  let questionInput = data.yourQuestion;
+  question.textContent = questionInput;
+
+  // console.log(question);
+
+  const answerButton = document.createElement("button");
+  answerButton.setAttribute("class", "question-card__button");
+
+  const answer = document.createElement("paragraph");
+  answer.setAttribute("class", "question-card__answer");
+  let answerInput = data.yourAnswer;
+  answer.textContent = answerInput;
+
+  // console.log(answer);
+
+  const tagContainer = document.createElement("div");
+  tagContainer.setAttribute("class", "question-card__tags");
+
+  const tag = document.createElement("div");
+  tag.setAttribute("class", "question-card__tag");
+  let tagInput = data.yourTag;
+  tag.textContent = tagInput;
+}
+
+form.addEventListener("submit", onSubmit);
+
+// how do I get the Form Date into the Card? Really FormData and then some kinda loop? Or do I grab every individual one with target element?
+// Check in the code from class and the exercises of the others and come up with (a probably failing) attempt, then ask coach.
+/*
+
+// appends will go here. Is this also all singularly? Or some kind of Loop sitation?*/
