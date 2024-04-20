@@ -13,9 +13,9 @@
       <h1>Quiz App</h1>
     </header>
     <main data-js="main">
-      <form data-js="form">
-        <fieldset>
-          <label for="yourQuestion">Please submit your question here.</label>
+      <section>
+        <form data-js="form">
+          <label for="yourQuestion">Please submit your question here:</label>
           <textarea
             name="yourQuestion"
             id="yourQuestion"
@@ -27,7 +27,8 @@
           <small class="yourQuestion__character-count"
             >(<span data-js="amountLeftQuestion"></span> characters left)</small
           >
-          <label for="yourAnswer">Please submit your answer here.</label>
+
+          <label for="yourAnswer">Please submit your answer here:</label>
           <textarea
             name="yourAnswer"
             id="yourAnswer"
@@ -39,8 +40,9 @@
           <small class="yourAnswer__character-count"
             >(<span data-js="amountLeftAnswer"></span> characters left)</small
           >
+
           <label for="yourTag"
-            >Please provide us with a fitting tag for your question.</label
+            >Please provide us with a fitting tag for your question:</label
           >
           <input
             type="text"
@@ -51,9 +53,9 @@
             aria-label="yourTagInput"
             aria-labelledby="aria-help.md"
           />
-        </fieldset>
-        <button type="submit">Submit</button>
-      </form>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
     </main>
     <footer class="footer">
       <a href="index.html" class="footer__link">
