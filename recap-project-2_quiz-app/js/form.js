@@ -26,6 +26,7 @@ function onSubmit(event) {
 
   const answerButton = document.createElement("button");
   answerButton.setAttribute("class", "question-card__button");
+  answerButton.textContent = "Hide Answer";
 
   const answer = document.createElement("paragraph");
   answer.setAttribute("class", "question-card__answer");
@@ -40,7 +41,7 @@ function onSubmit(event) {
   const tag = document.createElement("div");
   tag.setAttribute("class", "question-card__tag");
   let tagInput = data.yourTag;
-  tag.textContent = tagInput;
+  tag.textContent = "#" + tagInput;
 
   console.log(tag);
 
