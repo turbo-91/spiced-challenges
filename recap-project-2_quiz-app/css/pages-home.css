@@ -5,6 +5,10 @@
   top: -15px;
 }
 
+.question-card__icon__hidden {
+  content: url("/assets/bookmark_filled.png");
+}
+
 .question-card__title {
   text-align: center;
 }
@@ -15,6 +19,11 @@
   border: 1px solid black;
   box-shadow: 0px 1px 5px 0px black;
   font-size: var(--fs-500);
+}
+
+.question-card__button__switch {
+  content: "hide answer";
+  background-color: rgb(20, 202, 202);
 }
 
 .question-card__tags {
@@ -31,4 +40,12 @@
 
 .question-card__tag:not(:last-child) {
   margin-right: 10px;
+}
+
+.question-card__answer {
+  visibility: hidden;
+}
+
+.question-card__answer__unhide {
+  visibility: visible;
 }

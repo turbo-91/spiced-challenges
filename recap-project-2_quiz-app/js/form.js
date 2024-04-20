@@ -29,7 +29,7 @@ function onSubmit(event) {
   answerButton.textContent = "Hide Answer";
 
   const answer = document.createElement("paragraph");
-  answer.setAttribute("class", "question-card__answer");
+  answer.setAttribute("class", "question-card__answer__form");
   let answerInput = data.yourAnswer;
   answer.textContent = answerInput;
 

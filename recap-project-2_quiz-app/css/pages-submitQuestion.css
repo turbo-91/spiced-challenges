@@ -22,7 +22,7 @@ fieldset {
   border: none;
   position: relative;
 }
-*/ .question-card__icon {
+.question-card__icon {
   position: absolute;
   height: 50px;
   right: 0;
@@ -33,7 +33,7 @@ fieldset {
   text-align: center;
 }
 
-.question-card__answer {
+.question-card__answer__form {
   margin-top: 20px;
   background-color: var(--accent-color);
   padding: 5px 10px;
