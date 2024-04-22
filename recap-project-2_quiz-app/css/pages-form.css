@@ -35,6 +35,15 @@ input {
   width: fit-content;
 }
 
+.question-card__button {
+  content: "show answer";
+  background-color: var(--accent-color);
+  padding: 5px 20px;
+  border: 0px solid black;
+  box-shadow: 0.5vw 0.5vw 1vw 0px rgb(167, 167, 167);
+  font-size: var(--fs-500);
+}
+
 .question-card__answer__form {
   margin-top: 2vw;
 }
