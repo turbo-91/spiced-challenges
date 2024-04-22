@@ -31,14 +31,20 @@ const lowerCaseAnswers = cards.map((card) => {
 // ['as often as you like.', ...]
 
 const questionsAndAnswersTogether = cards.map((card) => {
-  return "card.question.value + " - " + card.answer.value";
+  return card.question + " - " + card.answer;
 });
+
+console.log(questionsAndAnswersTogether);
 
 // ["How often can I use <header>? - As often as you like.", ...]
 
 const questionAndAnswer = cards.map((card) => {
-  return card.question.value, card.answer.value;
+  return (
+    "question: '" + card.question + "'" + ", " + "answer: '" + card.answer + "'"
+  );
 });
+
+console.log(questionAndAnswer);
 
 // [{ question: 'How often can I use <header>?', answer: 'As often as you like.'}, {...}]
 
