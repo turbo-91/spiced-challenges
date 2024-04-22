@@ -39,6 +39,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: var(--accent-color);
+  border: 0px;
+  box-shadow: 0.5vw 0.5vw 1vw 0px rgb(167, 167, 167);
 }
 
 .profile__button-wrapper button img {
