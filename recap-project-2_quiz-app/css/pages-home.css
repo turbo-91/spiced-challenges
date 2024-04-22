@@ -14,16 +14,22 @@
 }
 
 .question-card__button {
-  border-radius: 20px;
+  content: "show answer";
+  background-color: var(--accent-color);
+  /* border-radius: 20px;*/
   padding: 5px 20px;
-  border: 1px solid black;
-  box-shadow: 0px 1px 5px 0px black;
+  border: 0px solid black;
+  box-shadow: 0.5vw 0.5vw 1vw 0px rgb(167, 167, 167);
   font-size: var(--fs-500);
 }
 
-.question-card__button__switch {
+.question-card__button_hideAnswer {
+  border-radius: 20px;
+  padding: 5px 20px;
+  border: 1px solid black;
+  box-shadow: 0.5vw 0.5vw 1vw 0px rgb(167, 167, 167);
+  font-size: var(--fs-500);
   content: "hide answer";
-  background-color: rgb(20, 202, 202);
 }
 
 .question-card__tags {
@@ -34,8 +40,9 @@
 .question-card__tag {
   background-color: var(--accent-color);
   padding: 5px 10px;
-  border-radius: 20px;
-  border: 1px solid black;
+  border-radius: 0px;
+  box-shadow: 0.5vw 0.5vw 1vw 0px rgb(167, 167, 167);
+  border: 0px;
 }
 
 .question-card__tag:not(:last-child) {

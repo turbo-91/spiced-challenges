@@ -1,6 +1,6 @@
 :root {
-  --accent-color: lightblue;
-  --active-color: rgba(0, 155, 255, 1);
+  --accent-color: #7ea1ff;
+  --active-color: #5bbcff;
   --fs-500: 1.1rem;
   --fs-600: 1.5rem;
   --fs-900: 1.75rem;
@@ -8,16 +8,17 @@
 
 body {
   margin: 0;
+  background-color: #fffab7;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 h1 {
   margin: 0;
-  font-size: var(--fs-600);
+  font-size: var(--fs-900);
 }
 
 header,
@@ -31,19 +32,21 @@ header {
   top: 0;
   padding: 20px;
   background-color: var(--accent-color);
-  border-bottom: 2px solid black;
-  box-shadow: 0px -10px 13px 10px black;
+  /* border-bottom: 2px solid black;*/
+  box-shadow: 0px -10px 13px 10px rgb(167, 167, 167);
 }
 
 main {
   padding: 95px 20px 80px 20px;
+  background-color: #fffab7;
 }
 
 section {
   position: relative;
-  background-color: lightgray;
+  background-color: #ffd1e3;
   padding: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  box-shadow: 1vw 1vw 1vw 0px rgb(167, 167, 167);
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -55,12 +58,12 @@ section {
   display: flex;
   background-color: var(--accent-color);
   justify-content: space-between;
-  border-top: 2px solid black;
-  box-shadow: 0px 10px 13px 10px black;
+  /* border-top: 2px solid black; */
+  box-shadow: 0px 10px 13px 10px rgb(167, 167, 167);
 }
 
 .footer__icon {
-  height: 90px;
+  height: 70px;
   padding: 20px;
   object-fit: scale-down;
 }
