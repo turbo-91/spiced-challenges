@@ -76,8 +76,8 @@ yourQuestion.addEventListener("input", () => {
 
 // Character counter for answer input field
 
-const yourAnswer = document.querySelector('[data-js="yourAnswer"]');
-const amountLeftAnswer = document.querySelector('[data-js="amountLeftAnswer"]');
+const yourAnswer = document.querySelector('[data-js="yourQuestion"]');
+const amountLeftAnswer = document.querySelector('[data-js"amounLeftAnswer"]');
 const maxLengthAnswer = yourAnswer.getAttribute("maxlength");
 
 const updateAmountLeftAnswer = (value) => {
