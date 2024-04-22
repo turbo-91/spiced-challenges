@@ -14,7 +14,7 @@ function onSubmit(event) {
 
   const img = document.createElement("img");
   img.setAttribute("class", "question-card__icon");
-  img.setAttribute("src", "./assets/bookmark.png");
+  img.setAttribute("src", "./assets/bookmark_transparent.png");
   img.setAttribute("alt", "bookmark");
 
   const question = document.createElement("h2");
@@ -33,8 +33,6 @@ function onSubmit(event) {
   let answerInput = data.yourAnswer;
   answer.textContent = answerInput;
 
-  console.log(answer);
-
   const tagContainer = document.createElement("div");
   tagContainer.setAttribute("class", "question-card__tags");
 
@@ -52,9 +50,13 @@ function onSubmit(event) {
   sectionCard.append(answer);
   sectionCard.append(tagContainer);
   tagContainer.append(tag);
+
+  event.target.reset();
 }
 
 form.addEventListener("submit", onSubmit);
+
+// add show / hide functionality
 
 // Character counter for question input field
 
@@ -76,8 +78,8 @@ yourQuestion.addEventListener("input", () => {
 
 // Character counter for answer input field
 
-const yourAnswer = document.querySelector('[data-js="yourQuestion"]');
-const amountLeftAnswer = document.querySelector('[data-js"amounLeftAnswer"]');
+const yourAnswer = document.querySelector('[data-js="Answer"]');
+const amountLeftAnswer = document.querySelector('[data-js="amountLeftAnswer"]');
 const maxLengthAnswer = yourAnswer.getAttribute("maxlength");
 
 const updateAmountLeftAnswer = (value) => {
@@ -86,6 +88,6 @@ const updateAmountLeftAnswer = (value) => {
 
 updateAmountLeftAnswer(maxLengthAnswer);
 
-yourQuestion.addEventListener("input", () => {
+yourAnswer.addEventListener("input", () => {
   updateAmountLeftAnswer(maxLengthAnswer - yourAnswer.value.length);
 });
