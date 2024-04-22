@@ -36,12 +36,7 @@ input {
 }
 
 .question-card__answer__form {
-  margin-top: 20px;
-  background-color: var(--accent-color);
-  padding: 5px 10px;
-  border-radius: 20px;
-  border: 1px solid black;
-  background-color: var(--active-color);
+  margin-top: 2vw;
 }
 
 .yourAnswer__character-count {
