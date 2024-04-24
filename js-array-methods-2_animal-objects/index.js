@@ -89,6 +89,9 @@ const indexOfAnimalWithNameLongerFive = animals.findIndex(
   (animal) => animal.name.length > 5
 );
 console.log(indexOfAnimalWithNameLongerFive);
+
+//-----------------------------------------------------------------------//
+
 // Note:
 // - Sorting strings is slightly more complicated than sorting numbers.
 // - You will need if-statements and return values of -1, 1, and 0.
@@ -98,7 +101,18 @@ console.log(indexOfAnimalWithNameLongerFive);
 // Hint: sort() mutates the original array, which is bad.
 // -> Use animals.slice().sort(...) to make a copy (and the tests work).
 
-const animalsSortedAlphabetically = null;
+const animalsSortedAlphabetically = animals.sort((animalA, animalB) => {
+  if (animalA.name < animalB.name) {
+    return -1;
+  }
+  if (animalA.name > animalB.name) {
+    return 1;
+  } else return 0;
+});
+
+console.log(animalsSortedAlphabetically);
+
+//-----------------------------------------------------------------------//
 
 const animalsSortedByWeightStartingWithLowest = null;
 
