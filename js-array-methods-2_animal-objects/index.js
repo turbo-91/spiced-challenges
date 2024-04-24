@@ -114,17 +114,41 @@ console.log(animalsSortedAlphabetically);
 
 //-----------------------------------------------------------------------//
 
-const animalsSortedByWeightStartingWithLowest = null;
+const animalsSortedByWeightStartingWithLowest = animals.sort(
+  (animalA, animalB) => {
+    if (animalA.weight < animalB.weight) {
+      return -1;
+    }
+    if (animalA.weight > animalB.weight) {
+      return 1;
+    } else return 0;
+  }
+);
 
-const animalsSortedByWeightReversed = null;
+console.log(animalsSortedByWeightStartingWithLowest);
+
+//-----------------------------------------------------------------------//
+
+const animalsSortedByWeightReversed =
+  animalsSortedByWeightStartingWithLowest.reverse();
+
+console.log(animalsSortedByWeightReversed);
+
+//-----------------------------------------------------------------------//
 
 const animalWithWeightMoreThanFivehundredExists = null;
+
+//-----------------------------------------------------------------------//
 
 // Hint: Filter for Europe first, then check every animal for its weight.
 const allAnimalsInEuropeWeighLessThanOnehundred = null;
 
+//-----------------------------------------------------------------------//
+
 // Hint: filter + map + reduce
 const weightOfAllAnimalsInAfrica = null;
+
+//-----------------------------------------------------------------------//
 
 // Hint: As above, but divided by the number of animals in Africa.
 const averageWeightOfAllAnimalsInAfrica = null;
