@@ -3,28 +3,40 @@ import getRandomColor from "./utils/randomColor.js";
 
 const root = document.getElementById("root");
 
-const circle = document.createElement("div");
-circle.classList.add("circle");
-circle.addEventListener("click", () => {
-  let randomColor = getRandomColor();
-  console.log(randomColor);
-  circle.style.backgroundColor = randomColor;
-});
+function Circle() {
+  const circle = document.createElement("div");
+  circle.classList.add("circle");
+  circle.addEventListener("click", () => {
+    let randomColor = getRandomColor();
+    circle.style.backgroundColor = randomColor;
+  });
+  return circle;
+}
 
-const square = document.createElement("div");
-square.classList.add("square");
-square.addEventListener("click", () => {
-  let randomColor = getRandomColor();
-  console.log(randomColor);
-  square.style.backgroundColor = randomColor;
-});
+const circleElement = Circle();
 
-const pentagon = document.createElement("div");
-pentagon.classList.add("pentagon");
-pentagon.addEventListener("click", () => {
-  let randomColor = getRandomColor();
-  console.log(randomColor);
-  pentagon.style.backgroundColor = randomColor;
-});
+function Square() {
+  const square = document.createElement("div");
+  square.classList.add("square");
+  square.addEventListener("click", () => {
+    let randomColor = getRandomColor();
+    square.style.backgroundColor = randomColor;
+  });
+  return square;
+}
 
-root.append(circle, square, pentagon);
+const squareElement = Square();
+
+function Pentagon() {
+  const pentagon = document.createElement("div");
+  pentagon.classList.add("pentagon");
+  pentagon.addEventListener("click", () => {
+    let randomColor = getRandomColor();
+    pentagon.style.backgroundColor = randomColor;
+  });
+  return pentagon;
+}
+
+const pentagonElement = Pentagon();
+
+root.append(circleElement, squareElement, pentagonElement);
