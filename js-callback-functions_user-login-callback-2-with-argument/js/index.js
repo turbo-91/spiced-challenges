@@ -1,7 +1,18 @@
 console.clear();
 
+// EVERYTHING FROM HERE....
+
 function handleUserLogin(onSuccess) {
   onSuccess("Jane Doe");
 }
 
-// The exercise starts here!
+function showWelcomeMessage(userName) {
+  console.log(`Welcome ${userName}! You are logged in now.`);
+}
+handleUserLogin(showWelcomeMessage);
+
+// ... UNTIL HERE!!!!!!!
+
+// DOES THE SAME AS THIS:
+
+handleUserLogin((userName) => showWelcomeMessage(userName));
