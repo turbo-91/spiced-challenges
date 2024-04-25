@@ -25,10 +25,12 @@ body {
 
 .start-button:hover {
   background-color: #f5521c;
-  color: white;
+  color: rgb(255, 0, 140);
+  transition: color 10s ease-in;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
+    transition: box-shadow;
+ 
 
 .start-button:disabled {
   background-color: lightgrey;
