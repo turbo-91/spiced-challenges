@@ -6,7 +6,7 @@ export default function Avatar() {
     console.log("I could toggle a profile!");
   }
   return (
-    <button type={"button"} onClick={OnClick()} aria-label={"toggle profile"}>
+    <button type={"button"} onClick={OnClick} aria-label={"toggle profile"}>
       <Image src={avatar} alt={"avatar"} />
     </button>
   );
