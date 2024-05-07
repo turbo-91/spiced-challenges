@@ -2,25 +2,30 @@ import "./App.css";
 
 import avatar from "./assets/avatar.jpg";
 import logo from "./assets/logo.jpg";
+import Header from "./Header";
+import Navigation from "./Navigation";
+import Link from "./Link";
 
 export default function App() {
   return (
     <>
-      <header className="header">
-        <a href="#">
+      <Header>
+        {" "}
+        <Link href={"#"}>
           <img className="round-image" src={logo} alt="logo" />
-        </a>
-        <nav>
-          <a className="navigation__link" href="#home">
+        </Link>
+        <Navigation>
+          {" "}
+          <Link className="navigation__link" href={"#home"}>
             Home
-          </a>
-          <a className="navigation__link" href="#about">
+          </Link>
+          <Link className="navigation__link" href={"#about"}>
             About
-          </a>
-          <a className="navigation__link" href="#impressum">
+          </Link>
+          <Link className="navigation__link" href={"#impressum"}>
             Impressum
-          </a>
-        </nav>
+          </Link>
+        </Navigation>
         <button
           type="button"
           onClick={() => console.log("I could toggle a profile!")}
@@ -28,7 +33,8 @@ export default function App() {
         >
           <img className="round-image" src={avatar} alt="avatar" />
         </button>
-      </header>
+      </Header>
+
       <main>content goes here…</main>
     </>
   );
