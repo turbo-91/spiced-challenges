@@ -1,30 +1,20 @@
 import "./App.css";
 
 import avatar from "./assets/avatar.jpg";
-import logo from "./assets/logo.jpg";
 import Header from "./Header";
 import Navigation from "./Navigation";
 import Link from "./Link";
+import Logo from "./Logo";
 
 export default function App() {
   return (
     <>
       <Header>
-        {" "}
-        <Link href={"#"}>
-          <img className="round-image" src={logo} alt="logo" />
-        </Link>
+        <Logo />
         <Navigation>
-          {" "}
-          <Link className="navigation__link" href={"#home"}>
-            Home
-          </Link>
-          <Link className="navigation__link" href={"#about"}>
-            About
-          </Link>
-          <Link className="navigation__link" href={"#impressum"}>
-            Impressum
-          </Link>
+          <Link href={"#home"}>Home</Link>
+          <Link href={"#about"}>About</Link>
+          <Link href={"#impressum"}>Impressum</Link>
         </Navigation>
         <button
           type="button"
