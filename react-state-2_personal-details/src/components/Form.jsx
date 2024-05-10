@@ -2,10 +2,7 @@ import { useState } from "react";
 import "./Form.css";
 
 export default function Form() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-
-  function handleSubmit(event) {
+  function handleSubmit(event, setName, setEmail) {
     event.preventDefault();
     const formElements = event.target.elements;
     setName(formElements.name.value);
