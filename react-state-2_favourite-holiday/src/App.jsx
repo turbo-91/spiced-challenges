@@ -7,6 +7,9 @@ export default function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    const formElements = event.target.elements;
+    setHoliday(formElements.holiday.value);
+    setDate(formElements.date.value);
   }
 
   return (
