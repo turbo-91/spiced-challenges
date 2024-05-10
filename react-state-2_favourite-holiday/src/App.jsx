@@ -1,6 +1,10 @@
 import "./App.css";
+import { useState } from "react";
 
 export default function App() {
+  let [holiday, setHoliday] = useState("");
+  let [date, setDate] = useState("");
+
   function handleSubmit(event) {
     event.preventDefault();
   }
