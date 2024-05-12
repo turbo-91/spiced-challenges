@@ -3,8 +3,8 @@ import Form from "./components/Form.jsx";
 import { useState } from "react";
 
 export default function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
+  let [name, setName] = useState("");
+  let [email, setEmail] = useState("");
   function handleCreateUser({ name, email }) {
     setName(name), setEmail(email);
   }
@@ -20,10 +20,10 @@ export default function App() {
       />
       <h2>Your submitted details:</h2>
       <p>
-        Name: <span className="output">John doe</span>
+        Name: <span className="output">{setName}</span>
       </p>
       <p>
-        Email: <span className="output">John@Doe.com</span>
+        Email: <span className="output">{setEmail}</span>
       </p>
     </div>
   );
