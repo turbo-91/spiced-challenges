@@ -36,7 +36,7 @@ const initialEntries = [
   },
 ];
 
-export default function EntriesSection() {
+export default function EntriesSection({ entries }) {
   const [initialEntries, setEntries] = useState(initialEntries);
   return (
     <section className="entries-section">
