@@ -3,8 +3,10 @@ import EntryForm from "./components/EntryForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./App.css";
+import { useState } from "react";
 
-function App({ initialEntries, setEntries }) {
+function App({ entries }) {
+  const [initialEntries, setEntries] = useState(initialEntries);
   return (
     <div className="app">
       <Header />
