@@ -36,8 +36,7 @@ const initialEntries = [
   },
 ];
 
-export default function EntriesSection() {
-  const [entries, setEntries] = useState(initialEntries);
+export default function EntriesSection({ entries }) {
   return (
     <section className="entries-section">
       <Tabs>
