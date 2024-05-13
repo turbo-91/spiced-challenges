@@ -8,14 +8,14 @@ export default function App() {
   function handleAddTag(newTag) {
     setTags([...tags, newTag]);
   }
-  function handleSubtractTag(tagToDelete) {
+  function handleDeleteTag(tagToDelete) {
     setTags([...tags.filter((tag) => tag !== tagToDelete)]);
   }
 
   return (
     <main className="app">
       <Form onAddTag={handleAddTag} />
-      <List tags={tags} />
+      <List tags={tags} onDeleteTag={handleDeleteTag} />
     </main>
   );
 }
