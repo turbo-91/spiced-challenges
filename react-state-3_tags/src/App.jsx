@@ -5,7 +5,9 @@ import "./App.css";
 
 export default function App() {
   const [tags, setTags] = useState(["JavaScript", "React", "CSS", "HTML"]);
-
+  function handleAddTag(newTag){
+    setTags{[...tags, newTag]}
+  }
   return (
     <main className="app">
       <Form />
