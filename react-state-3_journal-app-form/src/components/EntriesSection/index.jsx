@@ -6,7 +6,7 @@ import Tab from "../Tab";
 import Badge from "../Badge";
 import { Fragment, useState } from "react";
 
-const initialEntries = [
+export const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",
