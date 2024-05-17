@@ -22,13 +22,7 @@ export default function VolumeDetails() {
           </li>
         ))}
       </ul>
-      <Image
-        src="/images/the-fellowship-of-the-ring.png"
-        alt={cover}
-        width={140}
-        height={230}
-      />
-      ;
+      <Image src={cover} alt={title} width={140} height={230} />;
     </>
   );
 }
