@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { volumes } from "@/resources/lib/data";
+import Image from "next/image";
 
 export default function TheFellowshipOfTheRing() {
   let fellowshipSlug = volumes.find(
@@ -20,6 +21,13 @@ export default function TheFellowshipOfTheRing() {
           {`${fellowshipSlug.books[1].ordinal}: "${fellowshipSlug.books[1].title}"`}
         </li>
       </ul>
+      <Image
+        src="/images/the-fellowship-of-the-ring.png"
+        alt={fellowshipSlug.title}
+        width={140}
+        height={230}
+      />
+      ;
     </>
   );
 }
