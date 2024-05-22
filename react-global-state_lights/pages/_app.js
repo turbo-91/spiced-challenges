@@ -30,7 +30,7 @@ export default function App({ Component, pageProps }) {
   return (
     <Layout>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <Component lights={lights} toggleLight={toggleLight} {...pageProps} />
     </Layout>
   );
 }

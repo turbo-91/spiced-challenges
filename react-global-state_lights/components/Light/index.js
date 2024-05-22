@@ -6,7 +6,7 @@ export default function Light({ isOn, name, onToggle }) {
     <LightButton
       type="button"
       onClick={() => {
-        handleToggle();
+        onToggle();
       }}
       $isOn={isOn}
     >
