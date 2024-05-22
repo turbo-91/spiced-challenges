@@ -16,6 +16,17 @@ const initialLights = [
 export default function App({ Component, pageProps }) {
   const [lights, setLights] = useState(initialLights);
 
+  function toggleLight(id) {
+    setLights((lights) =>
+      lights.map((light) => {
+        if (light.id === id) {
+          return { ...light, isOn: !light.isOn };
+        }
+        return light;
+      })
+    );
+  }
+
   return (
     <Layout>
       <GlobalStyle />
