@@ -27,6 +27,8 @@ export default function App({ Component, pageProps }) {
     );
   }
 
+  const lightsOnCount = lights.filter(({ isOn }) => isOn).length;
+
   return (
     <Layout>
       <GlobalStyle />
