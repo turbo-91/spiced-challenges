@@ -11,11 +11,23 @@ export default function Form() {
     },
   });
 
-  function handleNameChange(event) {}
+  function handleNameChange(event) {
+    updateMountain((draft) => {
+      draft.name = event.target.value;
+    });
+  }
 
-  function handleAltitudeChange(event) {}
+  function handleAltitudeChange(event) {
+    updateMountain((draft) => {
+      draft.values.altitude = event.target.value;
+    });
+  }
 
-  function handleMountainRangeChange(event) {}
+  function handleMountainRangeChange(event) {
+    updateMountain((draft) => {
+      draft.values.mountainRange = event.target.value;
+    });
+  }
 
   return (
     <StyledForm>
