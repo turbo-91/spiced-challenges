@@ -32,7 +32,12 @@ export default function App({ Component, pageProps }) {
   return (
     <Layout>
       <GlobalStyle />
-      <Component lights={lights} toggleLight={toggleLight} {...pageProps} />
+      <Component
+        lights={lights}
+        toggleLight={toggleLight}
+        lightsOnCount={lightsOnCount}
+        {...pageProps}
+      />
     </Layout>
   );
 }
