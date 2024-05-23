@@ -1,8 +1,7 @@
 import Card from "../../components/Card";
 import Layout from "../../components/Layout";
 import useSWR from "swr";
-
-const URL = "https://swapi.py4e.com/api/people/1";
+import { useRouter } from "next/router";
 
 const fetcher = async (url) => {
   const res = await fetch(url);
@@ -18,8 +17,15 @@ const fetcher = async (url) => {
 };
 
 export default function Character() {
-  const id = 1;
-  const { data, error, isLoading } = useSWR(URL, fetcher, {});
+  // get character id for Router
+  const router = useRouter();
+  const { id } = router.query;
+
+  const { data, error, isLoading } = useSWR(
+    `https://swapi.py4e.com/api/people/${id}`,
+    fetcher,
+    {}
+  );
   console.log("data", data);
   if (error) return <div>An error has occurred...</div>;
   if (isLoading) return <div>Loading...</div>;
