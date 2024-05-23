@@ -5,40 +5,31 @@ import useSWR from "swr";
 
 const URL = "https://api.wheretheiss.at/v1/satellites/25544";
 
+const fetcher = async (url) => {
+  const res = await fetch(url);
+  // If the status code between 200-299 still try to parse and throw
+  if (!res.ok) {
+    const error = new Error("An error occurred while fetching the data.");
+    // Attach extra info to the error object.
+    error.info = await res.json();
+    error.status = res.status;
+    throw error;
+  }
+  return res.json();
+};
+
 export default function ISSTracker() {
-  // const [coords, setCoords] = useState({
-  //   longitude: 0,
-  //   latitude: 0,
-  // });
-
-  // async function getISSCoords() {
-  //   try {
-  //     const response = await fetch(URL);
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       setCoords({ longitude: data.longitude, latitude: data.latitude });
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     getISSCoords();
-  //   }, 5000);
-
-  //   return () => {
-  //     clearInterval(timer);
-  //   };
-  // }, []);
+  const { data, error, isLoading } = useSWR(URL, fetcher);
+  console.log("data", data);
+  if (error) return <div>An error has occurred...</div>;
+  if (isLoading) return <div>Loading...</div>;
 
   return (
     <main>
-      <Map longitude={coords.longitude} latitude={coords.latitude} />
+      <Map longitude={data.longitude} latitude={data.latitude} />
       <Controls
-        longitude={coords.longitude}
-        latitude={coords.latitude}
+        longitude={data.longitude}
+        latitude={data.latitude}
         // onRefresh={getISSCoords}
       />
     </main>
