@@ -5,7 +5,7 @@ const chance = new Chance();
 const character = {
   firstName: chance.first(),
   lastName: chance.last(),
-  x: chance.twitter,
+  x: chance.twitter(),
   geohash: chance.geohash({ length: 4 }),
 };
 
