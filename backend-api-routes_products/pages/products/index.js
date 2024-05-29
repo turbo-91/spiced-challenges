@@ -25,7 +25,7 @@ export default function AllListings() {
     <ul>
       {data.map((product) => (
         <li key={product.id}>
-          <Link href={`/${product.id}`}>{product.name}</Link>
+          <Link href={`/products/${product.id}`}>{product.name}</Link>
         </li>
       ))}
     </ul>
