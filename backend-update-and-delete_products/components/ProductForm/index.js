@@ -2,10 +2,10 @@ import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
 import useSWR from "swr";
 
-export default function ProductForm({ onSubmit }) {
+export default function ProductForm({ onSubmit, fishName }) {
   return (
     <StyledForm onSubmit={onSubmit}>
-      <StyledHeading>Add a new Fish</StyledHeading>
+      <StyledHeading>Edit:</StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
         <input type="text" id="name" name="name" />
