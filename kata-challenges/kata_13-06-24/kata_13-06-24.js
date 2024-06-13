@@ -4,6 +4,7 @@
 // variable, and sum it with the respective variables for val and happiness.
 // If the sum is > 22 I return 'Sabbatical! Boom!', else 'Back to your desk, boy.'
 
+// s a b t i c l
 let string =
   "GIVE ME THE FUCKING SABBATICAL RIGHT THE FUCK NOW OR I WILL KILL YOU!!!!!!!!!!";
 let val = 0;
@@ -20,7 +21,7 @@ function sabb(string, val, happiness) {
     return count;
   }
 
-  const count = countLetters(string); // Correctly store the result in `count`
+  const count = countLetters(string);
   let finalSum = count + val + happiness;
   if (finalSum > 22) {
     return "Sabbatical! Boom!";
