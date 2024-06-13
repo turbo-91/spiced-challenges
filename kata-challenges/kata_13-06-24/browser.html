@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sabbatical Decision</title>
+  </head>
+  <body>
+    <script>
+      let string =
+        "GIVE ME THE FUCKING SABBATICAL RIGHT THE FUCK NOW OR I WILL KILL YOU!!!!!!!!!!";
+      let val = 0;
+      let happiness = 0;
+
+      function sabb(string, val, happiness) {
+        function countLetters(string) {
+          const lowerString = string.toLowerCase();
+          const sabbatical = "sabbatical";
+          let count = 0;
+          for (let letter of sabbatical) {
+            count += lowerString
+              .split("")
+              .filter((char) => char === letter).length;
+          }
+          return count;
+        }
+
+        const count = countLetters(string);
+        let finalSum = count + val + happiness;
+        if (finalSum > 22) {
+          return "Sabbatical! Boom!";
+        } else {
+          return "Back to your desk, boy.";
+        }
+      }
+
+      console.log(sabb(string, val, happiness));
+    </script>
+  </body>
+</html>
