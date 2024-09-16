@@ -6,3 +6,16 @@ function handleUserLogin(onSuccess) {
 }
 
 // Call handleUserLogin below!
+
+function showWelcomeMessage() {
+  console.log("Welcome! You are logged in now.");
+}
+
+function handleUserLogin(showWelcomeMessage, onSuccess) {
+  onSuccess();
+}
+
+function handleUserLogin() {
+  console.log("Welcome! You are logged in now.");
+  onSuccess();
+}
