@@ -7,26 +7,25 @@ const runner3 = document.querySelector('[data-js="runner"]:nth-of-type(3)');
 const startRaceButton = document.querySelector('[data-js="start-race-button"]');
 
 // You'll need to change something about this callback function:
-//                                         ↙️
+//
+
+/**
+ * Hint 1:
+ * The relay runners are already available in the global scope as `runner1`,
+ * `runner2` and `runner3`.
+ *
+ * Hint 2:
+ * Use `animateRunner(runnerX)` to animate the runners.
+ *
+ * Hint 3:
+ * The `animateRunner` function returns a promise which resolves when the animation is done.
+ **/
+
 startRaceButton.addEventListener("click", () => {
   startRaceButton.setAttribute("disabled", "");
-
-  /**
-   * Hint 1:
-   * The relay runners are already available in the global scope as `runner1`,
-   * `runner2` and `runner3`.
-   *
-   * Hint 2:
-   * Use `animateRunner(runnerX)` to animate the runners.
-   *
-   * Hint 3:
-   * The `animateRunner` function returns a promise which resolves when the animation is done.
-   **/
-
-  // --v-- write your code here --v--
-
-  // --^-- write your code here --^--
-
+  animateRunner(runner1)
+    .then(() => animateRunner(runner2))
+    .then(() => animateRunner(runner3));
   startRaceButton.removeAttribute("disabled");
 });
 
