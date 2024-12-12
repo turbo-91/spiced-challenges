@@ -1,8 +1,8 @@
+import { useState } from "react";
 import "./App.css";
 
 export default function App() {
-  let code = "?";
-
+  let [code, setCode] = useState("?");
   const validCode = "🐡🐠🐋";
 
   return (
@@ -11,7 +11,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            setCode("🐡");
           }}
         >
           <span role="img" aria-label="Pufferfish">
@@ -21,7 +21,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            setCode("🐋");
           }}
         >
           <span role="img" aria-label="Whale">
@@ -31,7 +31,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            console.log("Update Code!");
+            setCode("🐠");
           }}
         >
           <span role="img" aria-label="Clownfish">
@@ -43,7 +43,7 @@ export default function App() {
       <button
         type="button"
         onClick={() => {
-          console.log("Reset Code!");
+          setCode("?");
         }}
       >
         Reset
