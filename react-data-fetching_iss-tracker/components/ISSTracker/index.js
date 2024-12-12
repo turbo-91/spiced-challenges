@@ -1,44 +1,43 @@
 import { useEffect, useState } from "react";
 import Controls from "../Controls/index";
 import Map from "../Map/index";
+import useSWR from "swr";
 
 const URL = "https://api.wheretheiss.at/v1/satellites/25544";
 
-export default function ISSTracker() {
-  const [coords, setCoords] = useState({
-    longitude: 0,
-    latitude: 0,
-  });
-
-  async function getISSCoords() {
-    try {
-      const response = await fetch(URL);
-      if (response.ok) {
-        const data = await response.json();
-        setCoords({ longitude: data.longitude, latitude: data.latitude });
-      }
-    } catch (error) {
-      console.error(error);
-    }
+const fetcher = async (url) => {
+  const res = await fetch(url);
+  // If the status code between 200-299 still try to parse and throw
+  if (!res.ok) {
+    const error = new Error("An error occurred while fetching the data.");
+    // Attach extra info to the error object.
+    error.info = await res.json();
+    error.status = res.status;
+    throw error;
   }
+  return res.json();
+};
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      getISSCoords();
-    }, 5000);
+export default function ISSTracker() {
+  const { data, error, isLoading, mutate } = useSWR(URL, fetcher, {
+    //refreshInterval: 5000,
+  });
+  console.log("data", data);
+  if (error) return <div>An error has occurred...</div>;
+  if (isLoading) return <div>Loading...</div>;
 
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+  function handleReload(data) {
+    console.log("click!");
+    mutate(data);
+  }
 
   return (
     <main>
-      <Map longitude={coords.longitude} latitude={coords.latitude} />
+      <Map longitude={data.longitude} latitude={data.latitude} />
       <Controls
-        longitude={coords.longitude}
-        latitude={coords.latitude}
-        onRefresh={getISSCoords}
+        longitude={data.longitude}
+        latitude={data.latitude}
+        onRefresh={() => handleReload()}
       />
     </main>
   );
